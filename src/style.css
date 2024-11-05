@@ -1,0 +1,900 @@
+/*Establezco algunas propiedades generales de los html*/
+
+html{
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+    width: 100%;
+    font-size: 1em;
+    box-sizing: border-box;
+    font-weight: 700;
+
+}
+
+/*UX scrollreveal*/
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+    color: rgb(0, 59, 74);
+    background-color: rgb(247, 247, 247);
+}
+
+/*PRIMERO ESTABLECEMOS EL ESTILO DE TODO PARA PANTALLAS PEQUEÑAS: MOBILE FIRST*/
+
+/*HEADER*/
+
+header{
+    width: 100%;
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 10px 25px 10px;
+    overflow: hidden;
+    background-color: white;
+}
+/*Imagen*/
+
+header div,
+footer div{
+    width: 12%;
+}   
+header div img,
+footer div img{
+    max-width: 100%;
+}
+
+/**********INDICE***********/
+/* Menu de navegacion de la página índice*/
+nav{
+    /*position: absolute;
+    right: 25px;
+    top:0;
+    bottom: 0;*/
+    display: flex;                  
+    align-items: center;            /*Para organizar el contenido de dentro de manera que quede centrado*/
+    justify-content: space-between;     
+}
+
+.ul_menu_navegacion{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.ul_menu_navegacion li{
+    list-style: none;
+    /*display: inline-block;*/
+
+}
+
+.ul_menu_navegacion li:nth-child(1),
+.ul_menu_navegacion li:nth-child(2)
+{
+    padding-right: 5px;
+    border-right: 1px solid #2e4b8e ;
+}
+.ul_menu_navegacion li:nth-child(2),
+.ul_menu_navegacion li:nth-child(3)
+{
+    padding-left: 5px;
+}
+.enlaces_nav{
+    text-decoration: none;
+    color: #2e4b8e;
+
+}
+
+.enlaces_nav:hover{
+    text-decoration: none;
+    color: #5379d3;
+    font-size: 1.05em;
+}
+
+/***MAIN PARA EL TAMAÑO MOVIL***/
+#main_index{
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    line-height: 1.5rem;
+}
+
+.section_intro{
+    background-color: #edf1f7;
+    padding: 0 0 20px;
+}
+/*Imagen con título de la página de inicio*/
+#logo_suria{
+    height: 40vh;
+    background-image: url("../img/suria_2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; /* Para que el lema se posicione dentro del contenedor */
+    width: 100%;
+}
+
+.lema_p{
+    position: absolute;
+    top: 0; /*Para que el color de fondo negro ocupe desde el principio*/
+    bottom: 0; /*Para que el color de fondo negro ocupe hasta el final*/
+    width: 100%; /* ancho del contenedor al máximo*/
+    background-color: rgba(0, 0, 0, 0.7); /* Transparencia del color de fondo*/
+    display: flex; /*Para poder hacer que el lema siempre este centrado con las siguientes lineas*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Color blanco de la letra */
+    padding: 10px; 
+    font-size: 2em; /* Asignar tamaño al título del lema */
+    font-weight: 900;
+    line-height: 2.5rem;
+}
+
+
+#main_index h2{
+    padding: 30px 0;
+    text-align: center;
+    font-weight:900;
+}
+#section_index .readMoreCategory_btn{
+    padding: 0;
+}
+.introduccion_index{
+    padding: 0 10px;
+    text-align: center;
+    color: #4D4D4D;
+}
+
+/*Botón de llegir més*/
+.readMore_btn{
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 1000px;
+    color: white;
+    font-weight: 500;
+    background-color: #2e4b8e ;
+}
+/*Botón de llegir més EN HOVER*/
+
+.readMore_btn:hover{
+    background-color: #6492ff;
+    color: white;
+    cursor: pointer;
+}
+/*El contenido a mostrar tiene dos clases, una hide para ocultarlo y la show que se añade con javascript*/
+
+.hide{  
+    display: none; /*Clase para ocultar el contenido que se mostrará al hacer click en 'llegir més'*/
+}
+
+.show{
+    display: block;
+    margin:20px 0;
+}
+
+/*Section de movil*/
+#section_index{
+    padding: 0 0 20px;
+    /*display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px; esto lo utilizaremos a lo mejor en el momento de pantallas más grandes */
+}
+
+.div_img_section_one{
+    width: 100%;
+}
+
+.div_img_section_one img{
+    width: 100%;
+    max-height: 100%;
+}
+
+.p_section,
+.figcaption_detail{
+    padding: 5px 10px 5px;
+    text-align: right;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: #878787;
+}
+
+.h3_article_index{
+    padding: 5px 10px;
+    font-weight: 700;
+}
+
+.p_article{
+    padding: 5px 10px;
+    color: #4D4D4D;
+    font-weight: 400;
+}
+
+/************************/
+
+/*********CATEGORIA**********/
+.h1_notlema{
+    padding: 30px 10px;
+    font-size: 2rem;
+}   
+/*Estilos de los elementos que iran en el grid*/
+.sect_category article{ /*Estilos contenedor article*/
+    width: 95%;
+    height: 20%;
+    margin: 20px auto;
+    padding: 0 0 30px;
+    border: 1px solid rgba(77, 77, 77, 0.5);
+    border-radius:0 0 10px 10px;
+    background-color: white;
+    color: #4D4D4D; /*Color letra*/
+    font-weight: 400;
+}
+
+.sect_category figure{ /*Estilos contenedor figure*/
+    width: 100%;
+    aspect-ratio: 1/1; /* figure quadrat */
+    overflow: hidden;
+}
+
+.sect_category figure img{ /*Estilos imagen responsive*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sect_category article figure{
+    position: relative; 
+}
+.sect_category article figure figcaption{
+    position: absolute;
+    top: 10px;
+    left: 7.5px;
+    text-align: center;
+    background-color:rgba(0, 25, 84, 0.5);
+    color:#ffffff;
+    padding: 2.5px;
+    font-size: 0.70rem;
+    font-weight: 400;      
+}
+
+.sect_category a.h2_a{
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(to right, #2e4b8e, #5379d3, #6492ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 900;
+}
+
+.sect_category a.h2_a:hover{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.05rem;
+    background: linear-gradient(to right, #6492ff, #5379d3);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 900;
+}
+.sect_category p,
+.sect_category h2{
+    padding: 10px;
+    line-height: 1.5rem;
+}
+
+.readMoreCategory_btn{ /*Enlace mes detalls...*/
+    text-decoration: none;
+    display: block;
+    margin: 5px 0 !important; 
+    padding: 10px;
+    max-width: fit-content;
+    border: none;
+    border-radius: 1000px;
+    color: #2e4b8e !important;
+    font-weight:400 !important;
+}
+
+.readMoreCategory_btn:hover{ /*Enlace mes detalls...*/
+    color:#5379d3 !important;
+    font-size: 1.05rem;
+}
+/************************/
+
+/******DETALLS*******/
+#main_detail article,
+#main_detail section{
+    width: 95%;
+    margin: 20px auto;
+    padding-top: 15px;
+    background-color: white;
+    line-height: 1.5rem;
+
+}
+#main_detail article{
+    padding-bottom: 5px;
+}
+
+#main_detail p{
+    color: #4D4D4D;
+    font-weight: 400;
+    font-size: 0.90rem;
+    padding-bottom: 20px;
+}
+#main_detail h2{
+    padding-left: 0 !important;
+}
+
+blockquote{
+    border-left: thick double #0beb86;
+    margin-bottom: 20px;
+}
+blockquote p{
+    padding-bottom: 5px !important;
+    padding-left: 10px !important;
+    font-size: 0.80rem !important;
+}
+#main_detail h1{
+    padding: 10px 10px 20px;
+    line-height: 2.5rem;
+
+}
+#main_detail h2{
+    padding: 10px ;
+}
+
+#main_detail ul{
+    color: #4D4D4D;
+    font-weight: 400;
+    font-size: 0.90rem;
+    list-style:decimal;
+    padding-left: 20px;
+}
+#main_detail ul li{
+    margin-bottom: 20px;
+}
+#main_detail ul img{
+    display: block;
+    max-width: 100%;
+    margin: 10px auto 0;
+}
+
+.details_intro{
+    margin: 0 15px 15px;
+    background-color: #c8cbd3;
+    padding: 0 0 5px;
+}
+
+.details_intro h1{
+    padding: 5px 10px 10px !important;
+    font-size: 2rem;
+}
+.figure_video{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Proporción de aspecto para videos de YouTube (16:9) */
+    overflow: hidden;
+}
+
+.figure_video iframe{
+    position: absolute;
+      top: 0;
+      left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/***Aside***/
+aside{
+    width: 95%;
+    margin: 20px auto;
+}
+aside a {
+    display: block; 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+aside a:hover article {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5); 
+    transform: translateY(-2px); 
+    transition: 0.3s; 
+}
+
+aside article{
+    padding: 0 !important;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+aside figure{
+    margin: 0;
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+aside figcaption{
+position: absolute;
+right: 10px;
+top: 10px;
+font-weight: 400;
+color: white;
+background-color: rgba(0, 0, 0, 0.75);  
+padding: 5px;
+border-radius: 8px;
+}
+
+aside img{
+    max-width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+.detalleseventoaside{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.75); /* Fondo oscuro semitransparente */
+    color: white;
+}
+
+/*PRESENTACIÓ MOVIL*/
+.section_intropresentacio,
+.section_invitacio{
+    background-color: #edf1f7;
+    padding: 0 0 20px;
+    text-align: center;
+}
+.section_invitacio .readMoreCategory_btn{
+    margin: 0 auto !important;
+}
+.h1_notlemapresentacio{
+    padding: 30px 10px 10px;
+    font-size: 2rem;
+}
+#logo_suria_presentacio{
+    height: 40vh;
+    background-image: url("../img/pastorets.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; /* Para que el lema se posicione dentro del contenedor */
+    width: 100%;
+}
+
+#main_presentacio p,
+#main_presentacio ul{
+    color: #4D4D4D;
+    padding: 5px 10px;
+    line-height: 1.5rem;
+}
+
+#main_presentacio h2,
+#main_enllaç h2{
+    padding: 20px 10px 10px;
+}
+
+.section_presentacio_events p,
+.section_presentacio_events ul,
+.section_invitacio p
+{
+    font-weight: 400;
+    font-size: 0.90rem;
+    list-style: none;
+}
+
+.section_presentacio_events ul li{
+    padding: 10px 0 0 10px;
+}
+.section_invitacio figure{
+    margin: 30px 0 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+.section_invitacio figure img{/*imagen*/
+    width: 100%;
+    overflow: hidden;
+}
+.section_invitacio figure figcaption{
+padding-right: 0;
+}
+.section_presentacio_events{
+    padding-bottom: 30px;
+}
+
+/*********ENLLAÇ**********/
+#main_enllaç{
+    line-height: 1.5rem;
+}
+.section_documentacio ul,
+.section_documentacio p{
+    color: #4D4D4D;
+    list-style: none;
+    padding: 10px ;
+    font-weight: 400;
+}
+
+.section_documentacio ul{
+    padding: 10px 10px 10px 20px;
+    font-size: 0.90rem;
+}
+
+.links_btn{ /*lista de enlaces*/
+    text-decoration: none;
+    display: block;
+    max-width: fit-content;
+    border: none;
+    border-radius: 1000px;
+    color: #2e4b8e !important;
+    font-weight:400 !important;
+}
+
+.mdna{
+    text-decoration: none;
+    color: #2e4b8e !important;
+}
+.links_btn:hover,
+.mdna:hover{ /*Enlace mes detalls...*/
+    color:#5379d3 !important;
+    font-size: 0.95rem;
+}
+/******FOOTER (MÁS ARRIBA HAY ALGO DE LA IMAGEN*******/
+footer{
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(18, 16, 16);
+    color: hwb(0 100% 0%);
+}
+
+footer  div{
+    margin: 0 auto;
+}
+
+#menu_footer{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#menu_footer ul{
+    display: block;
+    list-style: none;
+}
+
+#menu_footer ul li{
+    border: none;
+}
+
+.footer_a{
+    color: white;
+    text-decoration: none;
+    font-weight:400;
+}
+
+.footer_a:hover{
+    color: #0beb86;
+    font-size: 1.01rem;
+}
+/**********PUNTS D'INTERRUPCIÓ**********/
+/*TABLET*/
+@media screen and (min-width:480px) {
+/*HEADER*/
+header div,
+footer div{     /*Imagen logo suria*/
+    width: 7%;
+}   
+
+header{ /*Lletra*/
+    font-size: 1.10rem;
+}
+
+main p{               
+    font-size: 1.05rem;
+}
+
+/*FOOTER*/
+footer{
+    display: inline-flex;
+    justify-content: space-between;
+}
+footer div{
+    margin: 0 !important;
+}
+
+footer nav{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 !important;
+
+}
+footer nav ul{
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ul_menu_navegacion li{
+    padding: 0 10px !important;
+}
+/*INDEX*/
+#logo_suria{
+    height: 50vh;
+}
+
+.lema_p{
+    font-size: calc(2rem + 1vw);
+    line-height: 3rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+/*INDEX FLOATS*/
+.div_img_section_one{
+    width: 95%;
+    margin: 20px auto;
+}
+.div_indexfloat{
+    width: 95%;
+    margin: 0 auto;
+}
+.div_indexfloat h3,
+.div_indexfloat p{
+    padding: 10px 0;
+}
+
+/*CATEGORIA*/
+.h1_notlema{
+    font-size: 2.5rem;
+}
+.sect_category {
+    width: 97%;
+    margin: 0 auto 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* Asegúrate de que este gap no cause problemas visuales */
+}
+.sect_category h1{
+    grid-column: span 2;
+    grid-row: 1;
+}
+.sect_category article:nth-of-type(1){
+    grid-column: 1;
+    grid-row: 2;
+}
+.sect_category article:nth-of-type(2){
+    grid-column: 2;
+    grid-row: 2;
+}
+.sect_category article:nth-of-type(3){
+    grid-column: 1;
+    grid-row: 3;
+}
+.sect_category article:nth-of-type(4){
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/* Estilos de los artículos en el grid */
+.sect_category article {
+    width: 100%; /* Mantén el ancho al 100% */
+    height: auto;
+    margin: 0 auto;
+    padding: 0 0 30px; /* Ajusta el padding según sea necesario */
+    border: 1px solid rgba(77, 77, 77, 0.5);
+    border-radius: 0 !important;
+    background: white !important;
+    color: #4D4D4D;
+    font-weight: 400;
+}
+
+.sect_category p,
+.sect_category .readMoreCategory_btn{
+    font-size: calc(0.5rem + 1vw) !important; 
+}
+
+
+/*PRESENTACIO*/
+.section_invitacio p,
+.section_invitacio a{
+    font-size: 1.05rem;
+}
+.section_invitacio a:hover{
+    font-size: 1.10rem;
+}
+}
+
+/*PUNT INTERRUPCIO TABLET MES GRANS O ORDINADORS PETITS*/
+@media screen and (min-width: 768px){
+/*HEADER*/
+header div,
+footer div{     /*Imagen logo suria*/
+    width: 5%;
+}  
+
+/*INDEX*/
+.lema_p{
+    font-size: calc(2rem + 1.5vw);
+    line-height: 3rem;
+}
+.introduccion_index{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+#section_index article {
+    display: flex;            /* Alinea los elementos en fila */
+    align-items: center;       /* Centra verticalmente ambos elementos */
+    width: 100%;
+    margin: 30px 0 0; 
+    padding: 0 10px;
+}
+
+.div_img_section_one {
+    margin-right: 20px;        /* Espacio entre imagen y texto */
+    transform: rotate(-2deg);
+    width: 40%;
+}
+
+.div_indexfloat {
+    width: 45%;                /* Ajusta el ancho del div de texto */
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+/*CATEGOTIA*/
+.h1_notlema{
+    font-size: 3rem;
+}
+
+/*DETALLE*/
+#main_detail{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 10px;
+}
+#main_detail h2{
+    padding-bottom: 20px !important;
+}
+#main_detail article{
+grid-column: 1 / 3;
+}
+#main_detail aside{
+    grid-column: 3;
+}
+/*aside*/
+aside h4{
+    text-align: center;
+}
+aside div{
+    padding: 10px !important;
+}
+aside figcaption{
+    font-size: 0.80rem;
+}
+/*PRESENTACIO*/
+#logo_suria_presentacio{
+    height: 50vh;
+}
+
+}
+
+@media screen and (min-width: 960px){
+ /*HEADER*/
+header div,
+footer div{     /*Imagen logo suria*/
+    width: 3%;
+}   
+
+header{ /*Lletra*/
+    font-size: 1.20rem;
+}
+
+main p{               
+    font-size: 1.20rem;
+}
+
+/*INDEX*/
+#logo_suria{
+    height: 60vh;
+}
+
+.lema_p{
+    font-size: calc(2rem + 2vw);
+    line-height: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.75rem;
+}
+#section_index{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/*CATEGORIA*/
+.sect_category article figure figcaption{
+    font-size: 0.85rem;
+}
+.sect_category{
+    max-width: 1000px;
+    margin: 0 auto 30px;
+}
+
+/*DETAILS*/
+#main_detail{
+    max-width: 1000px !important;
+    margin: 0 auto;
+}
+
+blockquote{
+    font-size: 1.20rem;
+}
+
+/*presentacio*/
+#logo_suria_presentacio{
+    height: 60vh;  
+}
+.section_intropresentacio p{
+    max-width: 900px !important;
+    margin: 0 auto;
+}
+
+.section_intropresentacio{
+    padding-bottom: 40px;
+}
+.section_presentacio_events h2,
+.section_presentacio_events p,
+.section_presentacio_events ul{
+    max-width: 900px;
+    margin: 0 auto;
+}
+#logo_suria_presentacio .lema_p{
+    min-width: 100%;
+}
+.section_invitacio figure{
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+/*LINKS*/
+.section_documentacio{
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+}

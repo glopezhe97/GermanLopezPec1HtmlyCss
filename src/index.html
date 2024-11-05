@@ -1,0 +1,104 @@
+<!DOCTYPE html>  
+
+<html lang="ca">
+    <head>
+        <meta charset="utf-8">
+    <meta
+        name="Página de inicio"
+        content="Suria"    
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!--Meta para eliminar el tamaño especificado por defecto de cada mobil-->
+    <title>Pàgina d'inici</title>
+    <link rel="stylesheet" href="./style.css"> <!--Pagina con los estilos CSS-->
+    
+    <!--LETRA LATO-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+   
+    <!--LETRA FIRA SANS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,600;1,600&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body id="body_index">
+        <header>
+            <div><a href="./index.html"><img src="../img/Escut_de_Suria.svg" alt="Escudo del pueblo de Súria"/></a></div>
+            <nav id="menu_navegacion_index">
+                <ul class="ul_menu_navegacion">
+                    <li><a href="./category.html" class="enlaces_nav">Categoria</a></li>
+                    <li><a href="./presentation.html"  class="enlaces_nav">Presentació</a></li>
+                    <li><a href="./links.html"  class="enlaces_nav">Enllaç</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main_index">
+            <section class="section_intro">
+            <div id="logo_suria">
+                <h1 class = "lema_p">Súria: Un poble ple d'història</h1>
+            </div>
+
+            <h2>Introducció al poble de Súria</h2>
+
+            <p class="introduccion_index">Súria es un municipi situat al centre de Catalunya, concretament dins de la comarca
+                Bages i de la provincia de Barcelona. La població consta de 6046 habitants.
+            </p>
+    
+            <div class="hide" id="hideText">
+                <p class="introduccion_index">La vall conté diferents ambients, des del Poble Vell, on es pot trobar el castell d'estil romànic,
+                    fins a Salipota que es la part més nova.  
+                </p>
+            </div>
+            <button class="readMore_btn" id="hideText_btn">LLEGIR MÉS</button>
+            </section>
+            <!--Sera un grid per tal de mostrar un parell de coses introductòries-->
+            <section id="section_index">
+                <article>
+
+                <figure class="div_img_section_one">
+                    <img src="../img/FiraMedieval2.jpg" alt="Fira Medieval de Súria 2023" />
+                    <figcaption class="p_section">Fira medieval</figcaption>
+
+                </figure>
+
+                <div class="div_indexfloat">
+                <a href="./category.html" class="readMoreCategory_btn"><h3 class="h3_article_index">Events locals</h3></a>
+                <p class="p_article">Gaudeix de la fira medieval, la seva festa major i 
+                    les Caramelles, una de les tradicions més antigues i les més grans de Catalunya.   
+                </p>
+                </div>
+            
+            </article>
+
+            <!-- <article>  <Ho tinc comentat per si trobo la manera de posar-ho>
+                <figure class="div_img_section_one">
+                    <img src="../img/coaner.jpg" alt="Castell de Coanr" />
+                    <figcaption class="p_section">Castell de Coaner</figcaption>
+
+                </figure>
+
+
+                <a href=""><h3 class="h3_article_index">Rutes recomenades</h3></a>
+                <p class="p_article">Descobreix els racons del poble i de la natura que l'envolta amb diferents
+                    rutes que s'ajusten al nivell del públic.   
+                </p>
+            </article> -->
+            </section>
+        </main>
+
+        <footer>
+            <div><a href="./index.html"><img src="../img/Escut_de_Suria.svg" alt="Escudo del pueblo de Súria"></a></div>
+            
+            <nav id="menu_footer">
+                <ul class="ul_menu_navegacion">
+                    <a href="" target="_blank" class="footer_a"><li>Contacte</li></a>
+                    <a href="" target="_blank" class="footer_a"><li>Política de privacitat</li></a>
+                    <a href="" target="_blank" class="footer_a"><li>On som</li></a>
+                </ul>
+            </nav>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
