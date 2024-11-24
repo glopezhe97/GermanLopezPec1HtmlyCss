@@ -34,8 +34,6 @@ body{
 header{
     width: 100%;
     position: relative;
-    display: inline-flex;
-    justify-content: space-between;
     padding: 10px 25px 10px;
     overflow: hidden;
     background-color: white;
@@ -44,12 +42,28 @@ header{
 
 header div,
 footer div{
-    width: 12%;
+    width: 50px;
 }   
+
 header div img,
 footer div img{
     max-width: 100%;
 }
+header div{
+    position: absolute;
+    top: 10px;
+    right: 50px;
+}
+header h1{
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(to right, #2e4b8e, #5379d3, #6492ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 900;
+}
+
 
 /**********INDICE***********/
 /* Menu de navegacion de la página índice*/
@@ -201,7 +215,17 @@ nav{
     width: 100%;
     max-height: 100%;
 }
+.clip-path-custom img {
+    clip-path: polygon(50% 0%, 0% 50%,50%, 100%, 100% 50%);
+    -webkit-clip-path: polygon(50% 0%, 0% 50%,50% 100%, 100% 50%);
+    transition: transform 0.3s ease-in-out;
+}
 
+.clip-path-custom img:hover {
+    clip-path: polygon(25% 0%, 0% 50%, 25% 100%, 100% 50%);
+    -webkit-clip-path: polygon(25% 0%, 0% 50%, 25% 100%,75% 100%,  100% 50%,75% 0%);
+    transform: scale(1.05);
+}
 .p_section,
 .figcaption_detail{
     padding: 5px 10px 5px;
@@ -367,6 +391,7 @@ blockquote p{
 #main_detail ul img{
     display: block;
     max-width: 100%;
+    max-height: 40vh;
     margin: 10px auto 0;
 }
 
@@ -471,15 +496,7 @@ aside img{
     padding: 30px 10px 10px;
     font-size: 2rem;
 }
-#logo_suria_presentacio{
-    height: 40vh;
-    background-image: url("../img/pastorets.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative; /* Para que el lema se posicione dentro del contenedor */
-    width: 100%;
-}
+
 
 #main_presentacio p,
 #main_presentacio ul{
@@ -521,10 +538,60 @@ padding-right: 0;
     padding-bottom: 30px;
 }
 
+#logo_suria_presentacio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    position: relative;
+}
+
+#logo_suria_presentacio svg{
+    width: 300;
+    height: 300px;
+    position: absolute;
+    top:50px;
+    left: -100px; /* Empieza fuera del viewport, a la izquierda */
+    animation: presentacioAnimation 3s ease-in-out forwards; /* Animación principal */
+    animation-play-state: running; /* Asegura que la animación no se detiene */
+
+}
+
+#logo_suria_presentacio svg text{
+    
+    animation: rotateText 3s linear infinite; /* Rotación continua */
+    transform-origin: 50% 30%; /* El texto rota alrededor del centro del círculo */
+}
+
+
+@keyframes presentacioAnimation {
+    0% {
+        transform: translateX(0); /* Empieza en la izquierda sin rotar */
+    }
+
+    100% {
+        transform: translateX(calc(50vw - 75px)); /* Llega al centro */
+    } 
+}
+
+@keyframes rotateText {
+    0%{
+        transform: rotate(0) scale(0.8);
+    }
+    50%{
+        transform: rotate(180deg) scale(1.10);
+    }
+    100%{
+        transform: rotate(360deg)scale(0.8);
+    }
+}
+
+
 /*********ENLLAÇ**********/
 #main_enllaç{
     line-height: 1.5rem;
 }
+
 .section_documentacio ul,
 .section_documentacio p{
     color: #4D4D4D;
@@ -600,7 +667,7 @@ footer  div{
 /*HEADER*/
 header div,
 footer div{     /*Imagen logo suria*/
-    width: 7%;
+    width: 50px;
 }   
 
 header{ /*Lletra*/
@@ -730,7 +797,7 @@ h2{
 /*HEADER*/
 header div,
 footer div{     /*Imagen logo suria*/
-    width: 5%;
+    width: 50px;
 }  
 
 /*INDEX*/
@@ -804,9 +871,7 @@ aside figcaption{
     font-size: 0.80rem;
 }
 /*PRESENTACIO*/
-#logo_suria_presentacio{
-    height: 50vh;
-}
+
 
 }
 
@@ -814,7 +879,7 @@ aside figcaption{
  /*HEADER*/
 header div,
 footer div{     /*Imagen logo suria*/
-    width: 3%;
+    width: 50px;
 }   
 
 header{ /*Lletra*/
@@ -866,9 +931,7 @@ blockquote{
 }
 
 /*presentacio*/
-#logo_suria_presentacio{
-    height: 60vh;  
-}
+
 .section_intropresentacio p{
     max-width: 900px !important;
     margin: 0 auto;
@@ -883,9 +946,7 @@ blockquote{
     max-width: 900px;
     margin: 0 auto;
 }
-#logo_suria_presentacio .lema_p{
-    min-width: 100%;
-}
+
 .section_invitacio figure{
     max-width: 900px;
     margin: 30px auto;
