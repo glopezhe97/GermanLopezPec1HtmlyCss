@@ -7,7 +7,7 @@
         name="Página de inicio"
         content="Suria"    
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!--Meta para eliminar el tamaño especificado por defecto de cada mobil-->
+    <meta name="viewport" content="width=device-width" /> <!--Meta para eliminar el tamaño especificado por defecto de cada mobil-->
     <title>Pàgina d'inici</title>
     <link rel="stylesheet" href="./style.css"> <!--Pagina con los estilos CSS-->
     
@@ -56,14 +56,15 @@
                     <!--Resolution switchingg-->
  
                     <img 
-                    srcset="../img/FiraMedieval450.jpg 450w,
-                            ../img/FiraMedieval768.jpg 768w,
+                    srcset="../img/FiraMedieval450.jpg 400w, 
+                            ../img/FiraMedieval768.jpg 768w, 
                             ../img/FiraMedieval2.jpg 945w"
-
-                    sizes=  "(max-width: 768px) 75vw,
-                            40vw"
-                    src="../img/FiraMedieval2.jpg" 
-                    alt="Fira Medieval de Súria 2023">
+                    sizes=  "(max-width: 450px) 50vw,
+                            (max-width: 768px) 60vw,
+                            85vw"
+                    src="../img/FiraMedieval2.jpg" alt="feria medieval"
+                    id="img"
+                    onload="showUrl()">
                     
                     <figcaption class="p_section">Fira medieval</figcaption>
 
@@ -92,6 +93,17 @@
             </nav>
         </footer>
         <script src="./script.js"></script>
+        <script>
+            function showUrl() {
+              const img = document.getElementById("img");
+              const p = document.createElement("p");
+              const fileName = img.currentSrc?.substring(
+                img.currentSrc.lastIndexOf("/"),
+              );
+              p.textContent = `Loaded: ${fileName}`;
+              document.body.appendChild(p);
+            }
+          </script>
 
     </body>
 </html>
