@@ -256,12 +256,12 @@ nav{
 
 /*********CATEGORIA**********/
 .h1_notlema{
-    width: 50%;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     padding: 30px 10px;
     font-size: 2rem;
-    animation: typing 2s steps(22), typer 0.2s step-end infinite alternate;
+    animation: typing 3s steps(25), typer 0.2s step-end infinite alternate;
 }   
 
 @keyframes typing {
@@ -269,7 +269,7 @@ nav{
         width: 0;
     }
     to{
-        width: 50%;
+        width: 100%;
     }
     
 }
