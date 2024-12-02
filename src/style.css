@@ -219,7 +219,7 @@ nav{
     max-width: 100%; /* Asegura que no exceda el tamaño del contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
     margin: 0 auto; /* Centra la imagen horizontalmente */
-    padding-top: 20px; /* En lugar de margin-top para más control, si aplica */
+    margin-top: 100px; /* En lugar de margin-top para más control, si aplica */
 }
 .clip-path-custom img {
     clip-path: polygon(50% 0%, 0% 50%,50%, 100%, 100% 50%);
@@ -340,7 +340,7 @@ nav{
 .sect_category p,
 .sect_category h2{
     padding: 10px;
-    line-height: 1.5rem;
+    line-height: 2rem !important;
 }
 
 .readMoreCategory_btn{ /*Enlace mes detalls...*/
@@ -373,6 +373,10 @@ nav{
     padding-top: 15px;
     background-color: white;
     line-height: 1.5rem;
+}
+#main_detail article{
+    padding-top: 0 !important;
+
 }
 #main_detail article{
     padding-bottom: 5px;
@@ -433,24 +437,14 @@ blockquote p{
     padding: 5px 10px 10px !important;
     font-size: 2rem;
 }
-.figure_video{
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* Proporción de aspecto para videos de YouTube (16:9) */
-    overflow: hidden;
-}
 
-.figure_video iframe{
-    position: absolute;
-      top: 0;
-      left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
+
+.details_intro img{
+        max-width: 100%;
+        object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsión */
+     
+    }
+
 
 /***Aside***/
 aside{
