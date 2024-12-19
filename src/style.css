@@ -68,7 +68,6 @@ header h1{
     background: linear-gradient(to right, #2e4b8e, #5379d3, #6492ff);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-clip: text;
     font-weight: 900;
 }
 
@@ -350,7 +349,6 @@ nav{
     background: linear-gradient(to right, #2e4b8e, #5379d3, #6492ff); /* Degradado inicial */
     -webkit-text-fill-color: transparent; /* Hace que el color del texto sea transparente */
     -webkit-background-clip: text; /* Clipa el fondo al texto (WebKit) */
-    background-clip: text; /* Clipa el fondo al texto (estándar) */
     font-weight: 900; /* Peso de fuente */
 }
 
@@ -359,7 +357,6 @@ nav{
     background: linear-gradient(to right, #6492ff, #5379d3); /* Cambia el degradado */
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-clip: text;
     transition: font-size 0.3s ease; /* Suaviza el cambio de tamaño y gradiente */
 
 }
