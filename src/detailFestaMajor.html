@@ -26,15 +26,18 @@
         <header>
             <h1 id="titulo">Suria Events</h1>
 
-            <div><a href="./index.html"><img src="../img/logotip.svg" alt="Logotipo de la web"/></a></div>
+            <div><a href="./index.html"><img src="../img/logofooter.svg" alt="logofootero de la web"/></a></div>
         </header>
 
         <main id="main_detail">
             <article>
                 <div class="details_intro">
-                    <figure class="figure_video">
-                        <iframe width="539" height="404" src="https://www.youtube.com/embed/mYcR8M_appc" title="Salats Festa Major Súria 2014" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </figure>
-                    <p class="figcaption_detail">Vídeo de Youtube</p>
+                    <picture>
+                        <source media="(max-width: 599px)" srcset="../img/festa-major-suria_artdir.jpeg" />
+                        <source media="(min-width: 600px)" srcset="../img/festa-major-suria.jpeg" />
+                     <img src="../img/festa-major-suria.jpeg" alt="Imatge de la nit de la trapellada"/>
+                    </picture>  
+                    <p class="figcaption_detail">La trapellada</p>
 
                     <h1>Una festa que no deixa indiferent</h1>
                 </div>
@@ -66,19 +69,36 @@
                         <li><strong>Concerts: </strong> Es pot gaudir de concerts diferents díes de la festa major. On hi ha orquestres
                             de ball, grups de versions, etc.
                             
-                             <img src="../img/concert.jpg" alt="Imatge de concert electronic"/></li>
+                             <img 
+                             srcset="../img/concert_430.jpg 430w, 
+                                    ../img/concert_700.jpg 700w"
+                            sizes="(max-width: 499px) 300px,
+                                    (min-width: 500px) 450px"
+                            class="img_detail_switch"
+                             src="../img/concert.jpg" alt="Imatge de concert electronic"/></li>
                             
                         <li><strong>Campionats esportius:</strong> 
                             Els més joves participen en una competició que dura tres dies, on a l'últim es fan jocs especials.
-                            <img src="../img/ken.jpeg" alt="Jugant a volley"/></li>
-                        
+                            <picture>
+                                <source media="(max-width: 599px)" srcset="../img/ken_artdir.jpeg?as=avif" type="image/avif" />
+                                <source media="(min-width: 600px)" srcset="../img/ken.jpeg?as=avif" type="image/avif" />
+                                <img src="../img/ken.jpeg" alt="Jugant a volley"/>
+                            </picture>
+                        </li>
                         <li><strong>Castells:</strong> El grup "Els salats" i d'altres pobles fan castells humans.
-                            <img src="../img/castellers.jpg" alt="Castellers de súria i d'altres">
+                            <picture>
+                                <source media="(max-width: 599px)" srcset="../img/castellers_artdir.jpg?as=avif" type="image/avif" />
+                                <source media="(min-width: 600px)" srcset="../img/castellers.jpg?as=avif" type="image/avif" />
+                                <img src="../img/castellers.jpg" alt="Castellers de súria i d'altres">
+                            </picture>
 
                         </li>
                         <li><strong>Castell de focs</strong> L'últim acte es un castell de focs on el cel s'omple de colors.
-                            
-                            <img src="../img/fuegosartificiales.jpg" alt="Castell de focs">
+                            <picture>
+                                <source media="(max-width: 599px)" srcset="../img/fuegosartificiales_artdir.jpg?as=webp" type="image/webp" />
+                                <source media="(min-width: 600px)" srcset="../img/fuegosartificiales.jpg?as=webp" type="image/webp" />
+                                <img src="../img/fuegosartificiales.jpg" alt="Castell de focs">
+                            </picture>
                         </li>
                     </ul>
                 </section>
@@ -124,7 +144,7 @@
         </main>
 
         <footer>
-            <div><a href="./index.html"><img src="../img/logotip.svg" alt="Logotipo Web"></a></div>
+            <div><a href="./index.html"><img src="../img/logofooter.svg" alt="logofootero footer Web"></a></div>
             
           <nav id="menu_footer">
                 <ul class="ul_menu_navegacion">

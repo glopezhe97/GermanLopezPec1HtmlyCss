@@ -25,7 +25,9 @@ html.sr .load-hidden {
 body{
     color: rgb(0, 59, 74);
     background-color: rgb(247, 247, 247);
+    height: 100%;
 }
+
 
 /*PRIMERO ESTABLECEMOS EL ESTILO DE TODO PARA PANTALLAS PEQUEÑAS: MOBILE FIRST*/
 
@@ -53,6 +55,11 @@ header div{
     position: absolute;
     top: 10px;
     right: 50px;
+}
+
+header div:hover{
+    transform: scale(1.25);
+    transition: transform 0.3s ease;
 }
 
 header h1{
@@ -129,15 +136,24 @@ nav{
 }
 /*Imagen con título de la página de inicio*/
 #logo_suria{
-    height: 40vh;
-    background-image: url("../img/suria_2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative; /* Para que el lema se posicione dentro del contenedor */
-    width: 100%;
+     position: relative; /* Para que el lema se posicione dentro del contenedor */
+     height: 40vh;
+
 }
 
+#logo_suria_div{
+    height: 100%;
+    width: 100%;
+   
+}
+
+#logo_suria_div img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .lema_p{
     position: absolute;
     top: 0; /*Para que el color de fondo negro ocupe desde el principio*/
@@ -185,18 +201,29 @@ nav{
 
 .readMore_btn:hover{
     background-color: #6492ff;
+    transform: scale(1.05);
     color: white;
     cursor: pointer;
+    transition:transform 0.3s ease-out, background-color 0.5s ease;
 }
 /*El contenido a mostrar tiene dos clases, una hide para ocultarlo y la show que se añade con javascript*/
 
 .hide{  
-    display: none; /*Clase para ocultar el contenido que se mostrará al hacer click en 'llegir més'*/
+    opacity: 0;
+    height: 0;
+    margin: 10px 0;
+    overflow: hidden; /* Evita contenido visible en el estado oculto */
+    transition: opacity 2s ease, height 2s ease-in-out;
 }
+
 
 .show{
     display: block;
-    margin:20px 0;
+    opacity: 1;
+    height: 50px;
+    overflow: hidden;
+    margin:10px 0;
+    transition: opacity 3s ease-in-out, height 1s ease-in-out; /* Transición suave */
 }
 
 /*Section de movil*/
@@ -209,9 +236,9 @@ nav{
 }
 
 .div_img_section_one {
-    width: 100%; /* O define un tamaño específico si es necesario */
-    max-width: 1200px; /* Tamaño máximo si quieres limitarlo */
-    margin: 0 auto; /* Centra el contenedor si es más pequeño que el padre */
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .div_img_section_one img {
@@ -219,10 +246,10 @@ nav{
     max-width: 100%; /* Asegura que no exceda el tamaño del contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
     margin: 0 auto; /* Centra la imagen horizontalmente */
-    margin-top: 100px; /* En lugar de margin-top para más control, si aplica */
+    margin-top: 100px; 
 }
 .clip-path-custom img {
-    clip-path: polygon(50% 0%, 0% 50%,50%, 100%, 100% 50%);
+    clip-path: polygon(50% 0%, 0% 50%,50% 100%, 100% 50%);
     -webkit-clip-path: polygon(50% 0%, 0% 50%,50% 100%, 100% 50%);
     transition: transform 0.3s ease-in-out;
 }
@@ -275,7 +302,7 @@ nav{
 }
 @keyframes typer {
     50% {
-      border-color: transparent
+      border-color: transparent;
     }
   }
 /*Estilos de los elementos que iran en el grid*/
@@ -317,25 +344,24 @@ nav{
     font-weight: 400;      
 }
 
-.sect_category a.h2_a{
-    display: inline-block;
-    text-decoration: none;
-    background: linear-gradient(to right, #2e4b8e, #5379d3, #6492ff);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    font-weight: 900;
+.sect_category a.h2_a {
+    display: inline-block; /* Define el elemento como bloque en línea */
+    text-decoration: none; /* Sin subrayado */
+    background: linear-gradient(to right, #2e4b8e, #5379d3, #6492ff); /* Degradado inicial */
+    -webkit-text-fill-color: transparent; /* Hace que el color del texto sea transparente */
+    -webkit-background-clip: text; /* Clipa el fondo al texto (WebKit) */
+    background-clip: text; /* Clipa el fondo al texto (estándar) */
+    font-weight: 900; /* Peso de fuente */
 }
 
-.sect_category a.h2_a:hover{
-    display: inline-block;
-    text-decoration: none;
-    font-size: 1.05rem;
-    background: linear-gradient(to right, #6492ff, #5379d3);
+.sect_category a.h2_a:hover {
+    font-size: 1.05rem; /* Incrementa ligeramente el tamaño de la fuente */
+    background: linear-gradient(to right, #6492ff, #5379d3); /* Cambia el degradado */
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    font-weight: 900;
+    transition: font-size 0.3s ease; /* Suaviza el cambio de tamaño y gradiente */
+
 }
 .sect_category p,
 .sect_category h2{
@@ -363,6 +389,17 @@ nav{
     padding: 15px;
     font-size: 1.05rem;
 }
+#section_index  .readMoreCategory_btn{
+    transition: none !important;
+}
+#section_index .readMoreCategory_btn:hover {
+    transition: color 0.3s ease !important; /* Esto desactiva la transición */
+    margin-left: 0 !important;
+    padding: 0!important;
+    font-size: 1.05rem !important;
+    background-color: white  !important;
+    color: #5379d3 !important;
+}
 /************************/
 
 /******DETALLS*******/
@@ -373,6 +410,7 @@ nav{
     padding-top: 15px;
     background-color: white;
     line-height: 1.5rem;
+    overflow: hidden;
 }
 #main_detail article{
     padding-top: 0 !important;
@@ -427,6 +465,9 @@ blockquote p{
     margin: 10px auto 0;
 }
 
+.img_detail_switch{
+    max-width: none !important;
+}
 .details_intro{
     margin: 0 15px 15px;
     background-color: #c8cbd3;
@@ -441,8 +482,8 @@ blockquote p{
 
 .details_intro img{
         max-width: 100%;
+        width: 100%;
         object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsión */
-     
     }
 
 
@@ -460,7 +501,7 @@ aside a {
 aside a:hover article {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5); 
     transform: translateY(-2px); 
-    transition: 0.5s ease-in; 
+    transition: transform 0.3s ease-in; 
 }
 
 aside article{
@@ -505,6 +546,10 @@ aside img{
 }
 
 /*PRESENTACIÓ MOVIL*/
+
+.figure_invitacio{
+    padding-top: 20px;
+}
 .section_intropresentacio,
 .section_invitacio{
     background-color: #edf1f7;
@@ -569,7 +614,7 @@ padding-right: 0;
 }
 
 #logo_suria_presentacio svg{
-    width: 300;
+    width: 300px;
     height: 300px;
     position: absolute;
     top:50px;
@@ -604,7 +649,7 @@ padding-right: 0;
         transform: rotate(180deg) scale(0.8);
     }
     100%{
-        transform: rotate(360deg)scale(1);
+        transform: rotate(360deg) scale(1);
     }
 }
 
@@ -612,6 +657,10 @@ padding-right: 0;
 /*********ENLLAÇ**********/
 #main_enllaç{
     line-height: 1.5rem;
+}
+
+.section_documentacio{
+    margin-bottom: 30px;
 }
 
 .section_documentacio ul,
@@ -645,7 +694,64 @@ padding-right: 0;
 .mdna:hover{ /*Enlace mes detalls...*/
     color:#5379d3 !important;
     font-size: 0.95rem;
+    transition: font-size 0.3s ease;
 }
+
+.animation_links{
+    width: 100%;
+    height: 400px;
+    max-width: 600px; /* Opcional: limita el tamaño máximo */
+    margin: 20px auto 0;
+    overflow: visible; /* Oculta cualquier contenido que se salga del contenedor */
+    display: block !important;
+}
+
+.animation_links svg {
+    display: block; /* Asegura que no haya espacio adicional por elementos inline */
+    max-width: 100%;
+    height: auto; /* Mantiene la proporción del SVG */
+    overflow: visible;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.circleParticlesLines:nth-of-type(1){
+    animation: girar 20s linear infinite;
+    
+    }
+    .circleParticlesLines:nth-of-type(2){
+        animation: girar 20s linear infinite reverse;
+        
+        }
+        .circleParticlesLines:nth-of-type(3){
+            animation: girar 20s linear infinite;
+            
+            }
+
+.circleParticles:nth-of-type(1){
+animation: girar 3s ease-in-out infinite alternate-reverse;
+
+}
+
+.circleParticles:nth-of-type(2){
+    animation: girar 4s 1s ease-in-out infinite alternate ;
+    }
+
+    .circleParticles:nth-of-type(3){
+        animation: girar 5s 0.5s ease-in-out infinite alternate;
+        }
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: 50px 30px; /* Origen en el centro de los círculos */
+    }
+    100% {
+        transform: rotate(360deg);
+        transform-origin: 50px 30px; /* Mantén el mismo origen */
+    }
+}
+
+
 /******FOOTER (MÁS ARRIBA HAY ALGO DE LA IMAGEN*******/
 footer{
     width: 100%;
@@ -681,7 +787,8 @@ footer  div{
 
 .footer_a:hover{
     color: #0beb86;
-    font-size: 1.01rem;
+    font-size: 1.03rem;
+    transition: font-size 0.3s ease, color 0.3s ease;
 }
 /**********PUNTS D'INTERRUPCIÓ**********/
 /*TABLET*/
@@ -812,6 +919,8 @@ h2{
 .section_invitacio a:hover{
     font-size: 1.10rem;
 }
+
+
 }
 
 /*PUNT INTERRUPCIO TABLET MES GRANS O ORDINADORS PETITS*/
@@ -893,6 +1002,11 @@ aside figcaption{
     font-size: 0.80rem;
 }
 /*PRESENTACIO*/
+
+/*LINKS*/
+.animation_links{
+ height: 560px;
+}
 
 
 }

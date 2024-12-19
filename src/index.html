@@ -26,12 +26,20 @@
         <header>
             <h1 id="titulo">Suria Events</h1>
 
-            <div><a href="./index.html"><img src="../img/logotip.svg" alt="Logotipo de la web"/></a></div>
+            <div><a href="./index.html"><img src="../img/logofooter.svg" alt="logofootero de la web"/></a></div>
         </header>
 
         <main id="main_index">
             <section class="section_intro">
             <div id="logo_suria">
+                <div id="logo_suria_div">
+                <picture>
+                    <source media="(max-width: 499px)" srcset="../img/suria_2_artdir.jpg" />
+                    <source media="(min-width: 500px)" srcset="../img/suria_2.jpg" />
+                <img src="../img/suria_2.jpg" alt="Poble vell de Súria">
+            </picture>
+
+            </div>
                 <h2 class = "lema_p">Súria: Un poble ple d'història</h2>
             </div>
 
@@ -56,15 +64,11 @@
                     <!--Resolution switchingg-->
  
                     <img 
-                    srcset="../img/FiraMedieval450.jpg 450w, 
-                            ../img/FiraMedieval768.jpg 768w, 
-                            ../img/FiraMedieval2.jpg 945w"
-                    sizes=  "(max-width: 450px) 50vw,
-                            (max-width: 768px) 60vw,
-                            85vw"
+                    srcset="../img/FiraMedieval450.jpg 450w, ../img/FiraMedieval768.jpg 768w, ../img/FiraMedieval2.jpg 945w"
+                    sizes=  "(max-width: 500px) 300px, (max-width: 800px) 500px, 800px"
                     src="../img/FiraMedieval2.jpg" alt="feria medieval"
                     id="img"
-                    onload="showUrl()">
+                    >
                     
                     <figcaption class="p_section">Fira medieval</figcaption>
 
@@ -82,7 +86,7 @@
         </main>
 
         <footer>
-            <div><a href="./index.html"><img src="../img/logotip.svg" alt="Logotipo Web"></a></div>
+            <div><a href="./index.html"><img src="../img/logofooter.svg" alt="logofootero Web"></a></div>
             
           <nav id="menu_footer">
                 <ul class="ul_menu_navegacion">
@@ -93,17 +97,7 @@
             </nav>
         </footer>
         <script src="./script.js"></script>
-        <script>
-            function showUrl() {
-              const img = document.getElementById("img");
-              const p = document.createElement("p");
-              const fileName = img.currentSrc?.substring(
-                img.currentSrc.lastIndexOf("/"),
-              );
-              p.textContent = `Loaded: ${fileName}`;
-              document.body.appendChild(p);
-            }
-          </script>
+        
 
     </body>
 </html>

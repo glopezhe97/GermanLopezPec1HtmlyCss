@@ -26,16 +26,18 @@
         <header>
             <h1 id="titulo">Suria Events</h1>
 
-            <div><a href="./index.html"><img src="../img/logotip.svg" alt="Logotipo de la web"/></a></div>
+            <div><a href="./index.html"><img src="../img/logofooter.svg" alt="logofootero de la web"/></a></div>
         </header>
 
         <main id="main_detail">
             <article>
                 <div class="details_intro">
-                    <figure class="figure_video">
-                        <iframe width="718" height="404" src="https://www.youtube.com/embed/vxgBVOVZMqQ" title="Santa Bàrbara 2015" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
-                    </figure>
-                    <p class="figcaption_detail">Vídeo de Youtube</p>
+                    <picture>
+                        <source media="(max-width: 599px)" srcset="../img/santabarbara_artdir.jpg" />
+                        <source media="(min-width: 600px)" srcset="../img/santabarbara.jpg" />
+                     <img src="../img/caramelles_suria.jpg" alt="Cartel Caramelles"/>
+                    </picture> 
+                    <p class="figcaption_detail">Estàtua del miner</p>
 
                     <h1>Patrona dels miners</h1>
                 </div>
@@ -62,15 +64,23 @@
                     <ul>
                         <li><strong>Galejada: </strong> Cada any la colla Tro gros obra l'acte al matí amb la galejada dels seus trabucs.
                             
-                             <img src="../img/trogrosbarbara.jpeg" alt="Galejada de trabucs a la fira santa barbara"/></li>
+                             <img 
+                             srcset="../img/trogrosbarbara.jpeg 1x,
+                                    ../img/trogrosbarbara-2x.jpeg 2x,
+                                    ../img/trogrosbarbara-x3.jpeg 3x"
+                             src="../img/trogrosbarbara.jpeg" 
+                             alt="Galejada de trabucs a la fira santa barbara"/>
+                        </li>
                             
                         <li><strong>Caminada:</strong> 
                             Es segueix un itinerari per la montanya on pots gaudir del paisatge miner.
-                            <img src="../img/caminadasantabarbara.jpg" alt="Mapa del recorregut de la caminada"/></li>
-                        
+                            <picture>
+                                <source media="(max-width: 599px)" srcset="../img/caminadasantabarbara-artdir.jpg?as=avif" type="image/avif" />
+                                <source media="(min-width: 600px)" srcset="../img/caminadasantabarbara.jpg?as=avif" type="image/avif" />
+                             <img src="../img/caminadasantabarbara.jpg" alt="Mapa recorregut de la caminada"/>
+                            </picture> 
+                        </li>
                         <li><strong>Partit de futbol:</strong> Cada any els miners fan competicions al camp de futbol, on es pot veure l'esportivitat.
-                            <img src="../img/campfutbol.jpeg" alt="Camp de futbol de súria">
-
                         </li>
                         
                        
@@ -118,7 +128,7 @@
         </main>
 
         <footer>
-            <div><a href="./index.html"><img src="../img/logotip.svg" alt="Logotipo Web"></a></div>
+            <div><a href="./index.html"><img src="../img/logofooter.svg" alt="logofootero Web"></a></div>
             
           <nav id="menu_footer">
                 <ul class="ul_menu_navegacion">
