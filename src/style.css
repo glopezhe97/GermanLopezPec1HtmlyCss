@@ -13,6 +13,7 @@ html{
 /*UX scrollreveal*/
 html.sr .load-hidden {
     visibility: hidden;
+    
 }
 
 *,
@@ -289,6 +290,9 @@ nav{
     font-size: 2rem;
     animation: typing 3s steps(25), typer 0.2s step-end infinite alternate;
 }   
+.loaded .h1_hotlema{
+    animation-play-state: running; 
+}
 
 @keyframes typing {
     from{

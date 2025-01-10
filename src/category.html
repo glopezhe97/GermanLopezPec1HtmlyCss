@@ -3,61 +3,45 @@
 <html lang="ca">
     <head>
         <meta charset="utf-8">
-    <meta
-        name="Pàgina de categoria"
-        content="Suria"    
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!--Meta para eliminar el tamaño especificado por defecto de cada mobil-->
-    <title>Pàgina de categoria</title>
-    <link rel="stylesheet" href="./style.css"> <!--Pagina con los estilos CSS-->
-    
-    <!--LETRA LATO-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
-   
-    <!--LETRA FIRA SANS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,600;1,600&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <!--SCROLLREVEAL.JS-->
-    <script src="https://unpkg.com/scrollreveal" defer></script>
-    <script>
-		ScrollReveal({ duration: 2000 })
-	</script>
+        <meta name="Pàgina de categoria" content="Suria" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Pàgina de categoria</title>
+        <link rel="stylesheet" href="./style.css"> <!-- Pagina con los estilos CSS -->
+        
+        <!--LETRA LATO-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+        
+        <!--SCROLLREVEAL.JS-->
+        <script src="https://unpkg.com/scrollreveal" defer></script>
+        
     </head>
 
     <body id="body_index">
         <header class="headerscroll load-hidden">
             <h1 id="titulo">Suria Events</h1>
-
             <div><a href="./index.html"><img src="../img/logofooter.svg" alt="logofootero de la web"/></a></div>
         </header>
 
         <main id="main_category">
-            
             <section class="sect_category">
                 <h1 class="h1_notlema load-hidden">Events de la localitat</h1>
                 <article class="articlescroll load-hidden">
                     <figure>
-                        <!--resolution switching, same size, distinct resol-->
                         <img 
                         srcset="../img/caramelles_suria.jpg 1x,
                                 ../img/caramelles_suria-2x.jpg 2x,
                                 ../img/caramelles_suria-3x.jpg 3x"
-                        
                         src="../img/caramelles_suria.jpg" alt="Cartell caramelles 2024" class="img_category"/>
                         <figcaption>Logo caramelles</figcaption>
                     </figure>
                     
-                    <a class = "h2_a" href="./detailCaramelles.html"><h2>Caramelles</h2></a>
-                    <p> Durant la setmana santa, Súria es vesteix de colors vius i tradicionals per representar
-                        un esdeveniment que data des del segle XVI. Hi ha 6 colles, on totes tenen algo especial, des d'un ball de bastons, de cascavells, 
-                        les galejades amb els trabucs de la colla Tro gros, fins als cants dels coros Sòrissons i la Llanterna. 
-                    </p>
-                    
+                    <a class="h2_a" href="./detailCaramelles.html"><h2>Caramelles</h2></a>
+                    <p> Durant la setmana santa, Súria es vesteix de colors vius i tradicionals per representar un esdeveniment que data des del segle XVI. Hi ha 6 colles...</p>
                     <a href="./detailCaramelles.html" class="readMoreCategory_btn">Més detalls...</a>
                 </article>
 
+                <!-- Otros artículos -->
                 <article class="articlescroll load-hidden">
                     <figure>
                         <img 
@@ -112,7 +96,7 @@
 
                         src="../img/santabarbara.jpg" alt="Santa Bárbara" class="img_category"
                         loading="lazy"/>
-                        
+
                         <figcaption>Rotonda del miner</figcaption>
 
                     </figure>
@@ -132,7 +116,7 @@
         <footer>
             <div><a href="./index.html"><img src="../img/logofooter.svg" alt="logofootero Web"></a></div>
             
-          <nav id="menu_footer">
+            <nav id="menu_footer">
                 <ul class="ul_menu_navegacion">
                     <li><a href="./category.html" class="footer_a">Categoria</a></li>
                     <li><a href="./presentation.html"  class="footer_a">Presentació</a></li>
@@ -140,22 +124,8 @@
                 </ul>
             </nav>
         </footer>
-        <script defer>
-        ScrollReveal().reveal('.headerscroll', 
-        {duration: 2000,
-        reset: false,
-        beforeReveal: (el) => el.classList.remove('load-hidden')
-        },
-        
-        );
-        ScrollReveal().reveal('.h1_notlema', {duration: 2000,
-        reset: false,
-        beforeReveal: (el) => el.classList.remove('load-hidden')
-        });
-        ScrollReveal().reveal('.articlescroll', {interval: 750,
-        reset: false,
-        beforeReveal: (el) => el.classList.remove('load-hidden')
-        });
-        </script>
+        <script src="./scriptScrollReveal.js" defer></script>
+
+       
     </body>
 </html>
