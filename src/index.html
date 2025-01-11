@@ -33,11 +33,21 @@
             <section class="section_intro">
             <div id="logo_suria">
                 <div id="logo_suria_div">
-                <picture>
-                    <source media="(max-width: 499px)" srcset="../img/suria_2_artdir.jpg" />
-                    <source media="(min-width: 500px)" srcset="../img/suria_2.jpg" />
-                <img src="../img/suria_2.jpg" alt="Poble vell de Súria">
-            </picture>
+                    <picture>
+                        <!-- Para pantallas pequeñas (<500px), sirve la imagen en formato WebP -->
+                        <source media="(max-width: 499px)" srcset="../img/suria_2_artdir.jpg?as=webp" type="image/webp" />
+                        
+                        <!-- Para pantallas grandes (>500px), sirve la imagen en formato WebP -->
+                        <source media="(min-width: 500px)" srcset="../img/suria_2.jpg?as=webp" type="image/webp" />
+                        
+                        <!-- Si el navegador no soporta WebP, sirve la imagen en formato AVIF -->
+                        <source media="(max-width: 499px)" srcset="../img/suria_2_artdir.jpg?as=avif" type="image/avif" />
+                        
+                        <source media="(min-width: 500px)" srcset="../img/suria_2.jpg?as=avif" type="image/avif" />
+                        
+                        <!-- Fallback: Si el navegador no soporta WebP ni AVIF, usa la imagen estándar -->
+                        <img src="../img/suria_2.jpg" alt="Poble vell de Súria" />
+                    </picture>
 
             </div>
                 <h2 class = "lema_p">Súria: Un poble ple d'història</h2>
