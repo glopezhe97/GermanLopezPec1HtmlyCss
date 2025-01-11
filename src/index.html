@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="./style.css"> <!--Pagina con los estilos CSS-->
     
     <!--LETRA LATO-->
-    <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
    
     <!--LETRA FIRA SANS-->
-    <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,600;1,600&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,600;1,600&family=Roboto:wght@100&display=swap" rel="stylesheet">
 
     </head>
 
@@ -63,12 +64,19 @@
                     <!--Resolution switchingg-->
  
                     <img 
-                    srcset="../img/FiraMedieval450.jpg 450w, ../img/FiraMedieval768.jpg 768w, ../img/FiraMedieval2.jpg 945w"
-                    sizes=  "(max-width: 500px) 300px, (max-width: 800px) 500px, 800px"
-                    src="../img/FiraMedieval2.jpg" alt="feria medieval"
-                    id="img"
+                    srcset="
+                      ../img/FiraMedieval450.jpg?as=webp 450w, 
+                      ../img/FiraMedieval768.jpg?as=webp 768w, 
+                      ../img/FiraMedieval2.jpg?as=webp 945w,
+                      ../img/FiraMedieval450.jpg?as=avif 450w, 
+                      ../img/FiraMedieval768.jpg?as=avif 768w, 
+                      ../img/FiraMedieval2.jpg?as=avif 945w"
+                    sizes="(max-width: 500px) 300px, (max-width: 800px) 500px, 800px"
+                    src="../img/FiraMedieval2.jpg" 
+                    alt="feria medieval" 
+                    id="img" 
                     loading="lazy"
-                    >
+                    type="image/webp" />
                     
                     <figcaption class="p_section">Fira medieval</figcaption>
 
