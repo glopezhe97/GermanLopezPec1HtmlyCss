@@ -991,6 +991,10 @@ grid-column: 1 / 3;
 }
 #main_detail aside{
     grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /* Espacio entre los elementos del aside */
+}
 }
 /*aside*/
 aside h4{
@@ -1010,7 +1014,7 @@ aside figcaption{
 }
 
 
-}
+
 
 @media screen and (min-width: 960px){
  /*HEADER*/
