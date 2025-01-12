@@ -8,10 +8,16 @@
         <title>Pàgina de categoria</title>
         <link rel="stylesheet" href="./style.css"> <!-- Pagina con los estilos CSS -->
         
-        <!--LETRA LATO-->
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
-        
+        <!-- Conexión anticipada a Google Fonts -->
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+
+   <!-- Preload de las fuentes esenciales -->
+   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@100&display=swap" as="style">
+
+   <!-- Enlace habitual para aplicar las fuentes -->
+   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
         <!--SCROLLREVEAL.JS-->
         <script src="https://unpkg.com/scrollreveal" defer></script>
         <script src="./initialScrollScript.js" defer></script>
@@ -29,10 +35,12 @@
                 <article class="articlescroll load-hidden">
                     <figure>
                         <img 
-                        srcset="../img/caramelles_suria.jpg 1x,
-                                ../img/caramelles_suria-2x.jpg 2x,
-                                ../img/caramelles_suria-3x.jpg 3x"
-                        src="../img/caramelles_suria.jpg" alt="Cartell caramelles 2024" class="img_category"/>
+                            srcset="../img/caramelles_suria.jpg?as=webp 1x, 
+                                    ../img/caramelles_suria-2x.jpg?as=webp 2x, 
+                                    ../img/caramelles_suria-3x.jpg?as=webp 3x" 
+                            src="../img/caramelles_suria.jpg" 
+                            alt="Cartell caramelles 2024" 
+                            class="img_category">
                         <figcaption>Logo caramelles</figcaption>
                     </figure>
                     
@@ -44,12 +52,12 @@
                 <!-- Otros artículos -->
                 <article class="articlescroll load-hidden">
                     <figure>
-                        <img 
-                        srcset="../img/firamedievalcategoria.jpg 1x,
-                                ../img/firamedievalcategoria-2x.jpg 2x,
-                                ../img/firamedievalcategoria-3x.jpg 3x"
-
-                        src="../img/firamedievalcategoria.jpg" alt="Músics de fira medieval" class="img_category"/>
+                        <img srcset="../img/firamedievalcategoria.jpg?as=webp 1x, 
+                                    ../img/firamedievalcategoria-2x.jpg?as=webp 2x, 
+                                    ../img/firamedievalcategoria-3x.jpg?as=webp 3x" 
+                            src="../img/firamedievalcategoria.jpg" 
+                            alt="Músics de fira medieval" 
+                            class="img_category">
                         <figcaption>Músics de fira medieval</figcaption>
 
                     </figure>
@@ -65,13 +73,13 @@
 
                 <article class="articlescroll load-hidden">
                     <figure>
-                        <img 
-                        srcset="../img/festa-major-suria.jpeg 1x,
-                                ../img/festa-major-suria-2x.jpeg 2x,
-                                ../img/festa-major-suria-3x.jpeg 3x"
-
-                        src="../img/festa-major-suria.jpeg" alt="La trapellada" class="img_category"
-                        loading="lazy"/>
+                        <img srcset="../img/festa-major-suria.jpeg?as=webp 1x, 
+                                    ../img/festa-major-suria-2x.jpeg?as=webp 2x, 
+                                    ../img/festa-major-suria-3x.jpeg?as=webp 3x" 
+                            src="../img/festa-major-suria.jpeg" 
+                            alt="La trapellada" 
+                            class="img_category" 
+                            loading="lazy">                    
                         <figcaption>La trapellada</figcaption>
 
                     </figure>
@@ -89,13 +97,13 @@
 
                 <article class="articlescroll load-hidden">
                     <figure>
-                        <img
-                        srcset="../img/santabarbara.jpg 1x,
-                        ../img/santabarbara-2x.jpg 2x,
-                        ../img/santabarbara-3x.jpg 3x"
-
-                        src="../img/santabarbara.jpg" alt="Santa Bárbara" class="img_category"
-                        loading="lazy"/>
+                        <img srcset="../img/santabarbara.jpg?as=webp 1x, 
+                                    ../img/santabarbara-2x.jpg?as=webp 2x, 
+                                    ../img/santabarbara-3x.jpg?as=webp 3x" 
+                             src="../img/santabarbara.jpg" 
+                            alt="Santa Bárbara" 
+                                class="img_category" 
+                             loading="lazy">
 
                         <figcaption>Rotonda del miner</figcaption>
 
