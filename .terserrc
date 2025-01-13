@@ -1,0 +1,14 @@
+{
+  "compress": {
+    "drop_console": false,            // Mantiene los console.log (por si son necesarios para debugging)
+    "drop_debugger": true,            // Elimina instrucciones debugger
+    "keep_fargs": true,               // Conserva argumentos de funciones (importante para funciones como `beforeReveal`)
+    "pure_funcs": null,               // No elimina funciones que podrían considerarse "sin efectos secundarios"
+    "unused": true,                   // Elimina variables no utilizadas
+    "passes": 2                       // Aplica optimizaciones adicionales con múltiples pasadas
+  },
+  "mangle": {
+    "reserved": ["ScrollReveal"]      // No ofusca nombres importantes como `ScrollReveal`
+  },
+  "ecma": 2020                         // Usa sintaxis moderna de JavaScript
+}
