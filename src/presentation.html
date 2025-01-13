@@ -11,15 +11,16 @@
     <title>Pàgina de presentaciò</title>
     <link rel="stylesheet" href="./style.css"> <!--Pagina con los estilos CSS-->
     
-    <!--LETRA LATO-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
-   
-    <!--LETRA FIRA SANS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,600;1,600&family=Roboto:wght@100&display=swap" rel="stylesheet">
-
+        <!-- Conexión anticipada a Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+     
+        <!-- Preload de las fuentes esenciales -->
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@100&display=swap" as="style">
+     
+        <!-- Enlace habitual para aplicar las fuentes -->
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+     
     </head>
 
     <body id="body_index">
@@ -91,9 +92,9 @@
                 <a href="./category.html" class="readMoreCategory_btn">Llegir més...</a>
                 <figure class = "figure_invitacio">
                     <picture>
-                        <source media="(max-width: 599px)" srcset="../img/presentaciofinal-500.jpg" />
-                        <source media="(min-width: 600px)" srcset="../img/presentaciofinal.jpg" /> 
-                        <img src="../img/presentaciofinal.jpg" alt="Fotografia de caramellaires en rotllana" loading="lazy">
+                        <source media="(max-width: 599px)" srcset="../img/presentaciofinal-500.jpg?as=webp" />
+                        <source media="(min-width: 600px)" srcset="../img/presentaciofinal.jpg?as=webp" /> 
+                        <img src="../img/presentaciofinal.jpg" alt="Fotografia de caramellaires en rotllana" loading="lazy" type="image/webp">
                     </picture>
                     <figcaption class="figcaption_detail">
                         Galejada de trabucs al riu Cardener
