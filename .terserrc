@@ -1,0 +1,8 @@
+{
+  "mangle": {
+    "reserved": [
+      "toggleText",
+      "ScrollReveal"
+    ]
+  }
+}
