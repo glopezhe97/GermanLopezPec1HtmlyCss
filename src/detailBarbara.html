@@ -88,41 +88,66 @@
             </article>
             <aside>
                 <h3>Més events</h3>
-
-            <a href="./detailFestaMajor.html">
-                <article>
-                    <figure>
-                        <img src="../img/festa-major-suria.jpeg?as=avif" alt="Imatge trapellada de la festa major" />
-                    <figcaption>Trapellada</figcaption>
-                    </figure>
-                    <div class="detalleseventoaside">
-                        <h4>Festa Major</h4>
-                    </div>
-                </article>
-            </a>
-            <a href="./detailCaramelles.html">
-                <article>
-                    <figure>
-                        <img src="../img/trabucaires.jpg?as=avif" alt="Imatge trabucaires" />
-                        <figcaption>Galejada</figcaption>
-                    </figure>
-                    <div class="detalleseventoaside">
-                    <h4>Caramelles</h4>
-                    </div>
-                </article>
-            </a>
-            <a href="./detailMedieval.html">
-                <article>
-                    <figure>
-                        <img src="../img/FiraMedieval2.jpg?as=avif" alt="Imatge fira medieval" />
-                        <figcaption>Músics de la fira</figcaption>
-                    </figure>
-                    <div class="detalleseventoaside">
-                    <h4>Fira Medieval</h4>
-                    </div>
-                </article>
-            </a>
-
+            
+                <a href="./detailFestaMajor.html">
+                    <article>
+                        <figure>
+                            <!-- Art Direction y Resolution Switching -->
+                            <picture>
+                                <!-- Imagen optimizada para pantallas pequeñas (menores a 768px) -->
+                                <source media="(max-width: 768px)" srcset="../img/festa-major-suria768.jpeg?as=avif" type="image/avif" />
+                                <!-- Imagen optimizada para pantallas más grandes (mayores a 768px) -->
+                                <source media="(min-width: 769px)" srcset="../img/festa-major-suriaaside.jpeg.jpeg?as=avif" type="image/avif" />
+                                <!-- Imagen estándar si el navegador no soporta AVIF -->
+                                <img src="../img/festa-major-suria.jpeg" alt="Imatge trapellada de la festa major" />
+                            </picture>
+                            <figcaption>Trapellada</figcaption>
+                        </figure>
+                        <div class="detalleseventoaside">
+                            <h4>Festa Major</h4>
+                        </div>
+                    </article>
+                </a>
+            
+                <a href="./detailCaramelles.html">
+                    <article>
+                        <figure>
+                            <!-- Art Direction y Resolution Switching -->
+                            <picture>
+                                <!-- Imagen optimizada para pantallas pequeñas (menores a 768px) -->
+                                <source media="(max-width: 768px)" srcset="../img/trabucaires768.jpg?as=avif" type="image/avif" />
+                                <!-- Imagen optimizada para pantallas más grandes (mayores a 768px) -->
+                                <source media="(min-width: 769px)" srcset="../img/trabucaires.jpg?as=avif" type="image/avif" />
+                                <!-- Imagen estándar si el navegador no soporta AVIF -->
+                                <img src="../img/trabucaires.jpg" alt="Imatge trabucaires" />
+                            </picture>
+                            <figcaption>Galejada</figcaption>
+                        </figure>
+                        <div class="detalleseventoaside">
+                            <h4>Caramelles</h4>
+                        </div>
+                    </article>
+                </a>
+            
+                <a href="./detailMedieval.html">
+                    <article>
+                        <figure>
+                            <!-- Art Direction y Resolution Switching -->
+                            <picture>
+                                <!-- Imagen optimizada para pantallas pequeñas (menores a 768px) -->
+                                <source media="(max-width: 768px)" srcset="../img/FiraMedieval2768.jpg?as=avif" type="image/avif" />
+                                <!-- Imagen optimizada para pantallas más grandes (mayores a 768px) -->
+                                <source media="(min-width: 769px)" srcset="../img/FiraMedieval2.jpg?as=avif" type="image/avif" />
+                                <!-- Imagen estándar si el navegador no soporta AVIF -->
+                                <img src="../img/FiraMedieval2.jpg" alt="Imatge fira medieval" />
+                            </picture>
+                            <figcaption>Músics de la fira</figcaption>
+                        </figure>
+                        <div class="detalleseventoaside">
+                            <h4>Fira Medieval</h4>
+                        </div>
+                    </article>
+                </a>
             </aside>
         </main>
 
