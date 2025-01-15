@@ -8,5 +8,9 @@
     },
     "png": {
       "palette": true
+    },
+    "avif": {
+      "quality": 78,  
+      "speed": 10    
     }
   }
