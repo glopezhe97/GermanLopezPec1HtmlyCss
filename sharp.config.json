@@ -10,7 +10,7 @@
       "palette": true
     },
     "avif": {
-      "quality": 78,  
-      "speed": 10    
+      "quality": 60,  
+      "speed": 5    
     }
   }
