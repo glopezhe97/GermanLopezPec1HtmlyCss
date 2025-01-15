@@ -11,6 +11,6 @@
     },
     "avif": {
       "quality": 60,  
-      "speed": 5    
+      "lossless": false
     }
   }
