@@ -519,8 +519,9 @@ aside figure{
     width: 100%;
     border-radius: 8px;
     position: relative;
-    aspect-ratio: 16/8;
+    
 }
+
 aside figcaption{
 position: absolute;
 right: 10px;
@@ -536,6 +537,7 @@ aside img{
     max-width: 100%;
     border-radius: 8px;
     display: block;
+    aspect-ratio: 16/8;
 }
 .detalleseventoaside{
     position:absolute;
