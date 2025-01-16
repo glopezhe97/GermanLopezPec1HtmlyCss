@@ -107,7 +107,15 @@
             <a href="./detailFestaMajor.html">
                 <article>
                     <figure>
-                        <img src="../img/festa-major-suria.jpeg?as=avif" alt="Imatge trapellada de la festa major" />
+                        <!-- Art Direction y Resolution Switching -->
+                        <picture>
+                            <!-- Imagen optimizada para pantallas pequeñas (menores a 768px) -->
+                            <source media="(max-width: 768px)" srcset="../img/festa-major-suria768.jpeg?as=avif" type="image/avif" />
+                            <!-- Imagen optimizada para pantallas más grandes (mayores a 768px) -->
+                            <source media="(min-width: 769px)" srcset="../img/festa-major-suriaaside.jpeg?as=avif" type="image/avif" />
+                            <!-- Imagen estándar si el navegador no soporta AVIF -->
+                            <img src="../img/festa-major-suria.jpeg" alt="Imatge trapellada de la festa major" />
+                        </picture>
                         <figcaption>Trapellada</figcaption>
                     </figure>
                     <div class="detalleseventoaside">
@@ -119,7 +127,15 @@
             <a href="./detailMedieval.html">
                 <article>
                     <figure>
-                        <img src="../img/FiraMedieval2.jpg?as=avif" alt="Imatge fira medieval" />
+                        <!-- Art Direction y Resolution Switching -->
+                        <picture>
+                            <!-- Imagen optimizada para pantallas pequeñas (menores a 768px) -->
+                            <source media="(max-width: 768px)" srcset="../img/FiraMedieval2768_aside.jpg?as=avif" type="image/avif" />
+                            <!-- Imagen optimizada para pantallas más grandes (mayores a 768px) -->
+                            <source media="(min-width: 769px)" srcset="../img/FiraMedieval2aside.jpg?as=avif" type="image/avif" />
+                            <!-- Imagen estándar si el navegador no soporta AVIF -->
+                            <img src="../img/FiraMedieval2.jpg" alt="Imatge fira medieval" />
+                        </picture>
                         <figcaption>Músics de la fira</figcaption>
                     </figure>
                     <div class="detalleseventoaside">
@@ -131,9 +147,18 @@
             <a href="./detailBarbara.html">
                 <article>
                     <figure>
-                        <img src="../img/santabarbara.jpg?as=avif" alt="Imatge santa Bàrbara" />
-                        <figcaption>Estàtua del miner</figcaption>
-                    </figure>
+                    <picture>
+                        <!-- Imagen optimizada para pantallas pequeñas (menores a 768px) -->
+                        <source media="(max-width: 768px)" srcset="../img/santabarbara768_aside.jpg?as=avif" type="image/avif" />
+                        <!-- Imagen optimizada para pantallas más grandes (mayores a 768px) -->
+                        <source media="(min-width: 769px)" srcset="../img/santabarbaraaside.jpg?as=avif" type="image/avif" />
+                        <!-- Imagen estándar si el navegador no soporta AVIF -->
+                        <img src="../img/santabarbara.jpg?as=avif" alt="Imatge fira medieval" />
+                    </picture>
+                    <figcaption>Estàtua del miner</figcaption>
+
+                </figure>
+                    
                     <div class="detalleseventoaside">
                         <h4>Santa Bàrbara</h4>
                     </div>
